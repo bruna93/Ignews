@@ -33,12 +33,11 @@ export default NextAuth({
                       q.Casefold(session.user.email)
                     )
                   )
-                ),
+                )),
                 q.Match(
                   q.Index('subscription_by_status'),
                   'active'
                 )
-              )
             ])
           )
         )
